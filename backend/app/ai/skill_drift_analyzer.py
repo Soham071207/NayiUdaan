@@ -1,0 +1,1 @@
+"""Skill drift analysis placeholder."""

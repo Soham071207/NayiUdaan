@@ -1,0 +1,1 @@
+"""Employer compatibility scoring placeholder."""

@@ -1,0 +1,1 @@
+"""Resume orchestration service placeholder."""

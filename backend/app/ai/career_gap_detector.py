@@ -1,0 +1,1 @@
+"""Career gap detection placeholder."""
