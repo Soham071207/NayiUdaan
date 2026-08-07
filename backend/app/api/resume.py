@@ -2,7 +2,7 @@ from fastapi import APIRouter, UploadFile, File
 
 from app.utils.pdf_reader import extract_text_from_pdf
 from app.ai.resume_parser import ResumeParser
-from app.ai.resume_intelligence import ResumeIntelligence
+from app.services.ai_engine import AIEngine
 
 router = APIRouter()
 
@@ -10,20 +10,20 @@ router = APIRouter()
 @router.post("/upload-resume")
 async def upload_resume(file: UploadFile = File(...)):
 
-    # Extract text
     text = extract_text_from_pdf(file)
 
-    # Skill Extraction
     parser = ResumeParser(text)
-    parsed_data = parser.extract_sections()
+    parsed = parser.extract_sections()
 
-    # AI Resume Intelligence
-    ai = ResumeIntelligence()
-    candidate_data = ai.analyze_resume(text)
+    engine = AIEngine()
+
+    result = engine.analyze_resume(
+        resume_text=text,
+        detected_skills=parsed["skills"]
+    )
 
     return {
-        "status": "success",
+        "success": True,
         "filename": file.filename,
-        "candidate": candidate_data,
-        "skills": parsed_data["skills"]
+        "data": result
     }

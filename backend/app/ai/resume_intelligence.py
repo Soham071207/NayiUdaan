@@ -1,18 +1,20 @@
 import json
-from app.ai.llm_client import GeminiClient
+from app.ai.llm_client import LLMClient
 
 
 class ResumeIntelligence:
 
     def __init__(self):
-        self.llm = GeminiClient()
+        self.llm = LLMClient()
 
-    def analyze_resume(self, resume_text: str):
+    def analyze_resume(self, resume_text):
 
         prompt = f"""
-You are an expert resume parser.
+You are an expert Resume Analyzer.
 
-Analyze the resume and return ONLY valid JSON.
+Extract ONLY the following information from the resume.
+
+Return ONLY valid JSON.
 
 Schema:
 
@@ -20,9 +22,25 @@ Schema:
     "name":"",
     "previous_role":"",
     "experience_years":0,
-    "education":[],
-    "projects":[],
-    "certifications":[]
+
+    "education":[
+        {{
+            "degree":"",
+            "major":""
+        }}
+    ],
+
+    "projects":[
+        {{
+            "name":""
+        }}
+    ],
+
+    "certifications":[
+        {{
+            "name":""
+        }}
+    ]
 }}
 
 Resume:
@@ -30,17 +48,4 @@ Resume:
 {resume_text}
 """
 
-        response = self.llm.ask(prompt)
-        response = response.replace("```json", "")
-        response = response.replace("```", "")
-        response = response.strip()
-
-        try:
-            return json.loads(response)
-
-        except Exception:
-
-            return {
-                "error":"Invalid JSON",
-                "raw_response":response
-            }
+        return self.llm.ask_json(prompt)
