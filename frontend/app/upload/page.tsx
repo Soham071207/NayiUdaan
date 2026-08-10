@@ -87,7 +87,7 @@ export default function UploadPage() {
           <AnimatePresence mode="wait">
             {stage === "idle" || stage === "error" ? (
               <motion.div key="upload" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                <DropZone onFileSelect={handleFileSelect} disabled={stage === "processing"} />
+                <DropZone onFileSelect={handleFileSelect} disabled={false} />
 
                 {/* Error */}
                 {error && (
