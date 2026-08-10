@@ -26,7 +26,9 @@ Schema:
     "roadmap":[
         {{
             "week":1,
-            "goal":""
+            "title":"",
+            "tasks":["", ""],
+            "resources":["", ""]
         }}
     ]
 }}
@@ -34,7 +36,9 @@ Schema:
 Rules:
 
 - Exactly 8 weeks
-- One goal per week
+- One main theme/title per week
+- Provide 3-4 specific tasks per week
+- Provide 2-3 specific learning resources per week
 - Learn highest priority skills first
 - Include one portfolio project
 - Include resume optimization

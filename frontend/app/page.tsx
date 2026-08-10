@@ -1,37 +1,56 @@
+import type { Metadata } from "next";
+import PublicNavbar from "@/components/layout/PublicNavbar";
+import HeroSection from "@/features/public/HeroSection";
+import MissionSection from "@/features/public/MissionSection";
+import FeaturesSection from "@/features/public/FeaturesSection";
+import ProgramsSection from "@/features/public/ProgramsSection";
+import SkillDevelopmentSection from "@/features/public/SkillDevelopmentSection";
+import JobOpportunitiesSection from "@/features/public/JobOpportunitiesSection";
+import SuccessStoriesSection from "@/features/public/SuccessStoriesSection";
+import TestimonialsSection from "@/features/public/TestimonialsSection";
+import NGOSection from "@/features/public/NGOSection";
+import EventsSection from "@/features/public/EventsSection";
+import MentorSection from "@/features/public/MentorSection";
+import FAQSection from "@/features/public/FAQSection";
+import PublicFooter from "@/features/public/PublicFooter";
+
+export const metadata: Metadata = {
+  title: "NayiUdaan — Empowering Every Indian Woman",
+  description:
+    "India's leading AI-powered women empowerment platform. Skills, jobs, mentorship, returnship programs, and community for every woman — from villages to cities.",
+  keywords: [
+    "women empowerment India", "career comeback women", "returnship India",
+    "skill development women", "NGO women India", "women mentorship",
+  ],
+  openGraph: {
+    title: "NayiUdaan — Har Naari Ka Naya Aagaz",
+    description: "Skills. Jobs. Mentorship. Community. For every Indian woman.",
+    type: "website",
+  },
+};
+
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-50">
-      <section className="mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center px-6 py-16 lg:px-10">
-        <div className="max-w-3xl space-y-6">
-          <span className="inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-sm font-medium text-cyan-200">
-            NayiUdaan AI
-          </span>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-            AI-powered career comeback platform for women.
-          </h1>
-          <p className="max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">
-            This frontend scaffold is prepared for resume intake, skill analysis, roadmap generation, returnship discovery, and interview coaching.
-          </p>
-        </div>
+    <div className="font-jakarta" style={{ background: "var(--bg-light)", color: "var(--text-main)" }}>
+      <PublicNavbar />
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          {[
-            "Resume Upload & Parsing",
-            "Career Gap Detection",
-            "AI Career Recovery Roadmap",
-            "Career Comeback Score",
-            "Returnship Discovery",
-            "AI Interview Coach"
-          ].map((feature) => (
-            <div
-              key={feature}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-2xl shadow-cyan-950/20 backdrop-blur"
-            >
-              <p className="text-sm font-medium text-slate-200">{feature}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-    </main>
+      {/* All 14 sections */}
+      <main id="main-content">
+        <HeroSection />
+        <MissionSection />
+        <FeaturesSection />
+        <ProgramsSection />
+        <SkillDevelopmentSection />
+        <JobOpportunitiesSection />
+        <SuccessStoriesSection />
+        <TestimonialsSection />
+        <NGOSection />
+        <EventsSection />
+        <MentorSection />
+        <FAQSection />
+      </main>
+
+      <PublicFooter />
+    </div>
   );
 }

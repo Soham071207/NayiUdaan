@@ -1,4 +1,4 @@
-from fastapi import APIRouter, UploadFile, File
+from fastapi import APIRouter, UploadFile, File, HTTPException
 
 from app.utils.pdf_reader import extract_text_from_pdf
 from app.ai.resume_parser import ResumeParser
@@ -8,9 +8,16 @@ router = APIRouter()
 
 
 @router.post("/upload-resume")
-async def upload_resume(file: UploadFile = File(...)):
+def upload_resume(file: UploadFile = File(...)):
+    print(f"Inside upload_resume! Filename: {file.filename}", flush=True)
+
+    if not file.filename.lower().endswith(".pdf"):
+        raise HTTPException(status_code=400, detail="Only PDF files are supported.")
 
     text = extract_text_from_pdf(file)
+
+    if not text.strip():
+        raise HTTPException(status_code=422, detail="Could not extract any text from this PDF.")
 
     parser = ResumeParser(text)
     parsed = parser.extract_sections()

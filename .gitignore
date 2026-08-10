@@ -31,3 +31,13 @@ build/
 ## OS and misc
 .DS_Store
 Thumbs.db
+
+## Test and Scratch files
+*.pdf
+mock_*.txt
+test_*.txt
+scratch/
+*_script.py
+fix_*.py
+start_servers.bat
+employer_intelligence/

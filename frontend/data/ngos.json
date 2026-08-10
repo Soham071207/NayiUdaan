@@ -1,0 +1,8 @@
+[
+  { "id": "n1", "name": "Pratham Education Foundation", "focus": "Digital Literacy", "location": "Pan India", "founded": 1994, "reach": "30M+", "website": "pratham.org", "color": "#5F8D4E" },
+  { "id": "n2", "name": "SEWA (Self Employed Women's Association)", "focus": "Livelihood & Labour Rights", "location": "Ahmedabad & Pan India", "founded": 1972, "reach": "2M+", "website": "sewa.org", "color": "#7FB77E" },
+  { "id": "n3", "name": "Smile Foundation", "focus": "Education & Health", "location": "Delhi & 25 States", "founded": 2002, "reach": "1.5M+", "website": "smilefoundationindia.org", "color": "#5F8D4E" },
+  { "id": "n4", "name": "Nanhi Kali", "focus": "Girl Child Education", "location": "Maharashtra, Rajasthan, MP", "founded": 1996, "reach": "500K+", "website": "nanhikali.org", "color": "#7FB77E" },
+  { "id": "n5", "name": "iDE India", "focus": "Rural Entrepreneurship", "location": "Bihar, UP, Odisha", "founded": 2010, "reach": "200K+", "website": "ide.org/india", "color": "#5F8D4E" },
+  { "id": "n6", "name": "Breakthrough India", "focus": "Gender Rights & Safety", "location": "Delhi, Haryana, Bihar, UP", "founded": 2000, "reach": "700K+", "website": "breakthrough.tv", "color": "#7FB77E" }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "s1",
+    "name": "Priya Sharma",
+    "location": "Noida, UP",
+    "before": "7-year career break after marriage and relocation",
+    "after": "Senior Software Engineer at Microsoft India",
+    "income": "₹22 LPA",
+    "duration": "8 weeks with NayiUdaan",
+    "story": "After relocating from Mumbai to Noida for my husband's job, I left my software engineering career. Seven years later, with two children and rusty skills, I uploaded my resume to NayiUdaan. The AI found that my core skills were still strong and created a focused 8-week plan. Week by week, I rebuilt my Python, practiced system design, and used the AI interview coach. Microsoft's returnship programme was the final step.",
+    "skills": ["Python", "System Design", "TypeScript"],
+    "program": "AI Career Comeback + Returnship",
+    "category": "Technology"
+  },
+  {
+    "id": "s2",
+    "name": "Rekha Mishra",
+    "location": "Patna, Bihar",
+    "before": "Never finished 10th grade. Agricultural family.",
+    "after": "Owner of 'Rekha's Boutique' with 8 employees",
+    "income": "₹45,000/mo",
+    "duration": "6 months",
+    "story": "I was 32, had no education beyond 8th class, and my husband said there was no future for me in business. I found NayiUdaan through a local NGO partner. I took the tailoring course and the financial literacy course. With a ₹50,000 micro-loan from a partner SHG, I started with a single machine. Today I employ 8 women from my village.",
+    "skills": ["Tailoring", "Business Management", "Team Leadership"],
+    "program": "Vocational Training + Financial Literacy",
+    "category": "Entrepreneurship"
+  },
+  {
+    "id": "s3",
+    "name": "Fatima Shaikh",
+    "location": "Ahmedabad, Gujarat",
+    "before": "Domestic violence survivor, no income, 3 children",
+    "after": "Independent data entry professional with stable income",
+    "income": "₹18,000/mo",
+    "duration": "3 months",
+    "story": "When I left my abusive marriage, I had nothing — no money, no skills, three children under 10. A legal aid partner connected me to NayiUdaan. I learned basic computers and data entry in 3 weeks. The platform connected me to my first job at a small accounting firm. Today I am fully financially independent and my children are in school.",
+    "skills": ["Data Entry", "MS Excel", "Basic Computers"],
+    "program": "Digital Literacy + Job Placement",
+    "category": "Livelihood"
+  },
+  {
+    "id": "s4",
+    "name": "Ananya Krishnamurthy",
+    "location": "Bengaluru, Karnataka",
+    "before": "5-year career break (caregiving for ailing parent)",
+    "after": "Data Science Lead at a health-tech startup",
+    "income": "₹28 LPA",
+    "duration": "10 weeks",
+    "story": "Leaving my data scientist role to care for my mother felt like the end of everything I had built. The gap in my resume felt impossible to explain. NayiUdaan reframed the narrative — the platform's AI showed recruiters exactly how my skills were still relevant, and connected me with three startups that valued diverse experience. I joined a health-tech company that was inspired by stories like mine.",
+    "skills": ["Machine Learning", "Python", "Healthcare Analytics"],
+    "program": "AI Career Comeback + Employer Matching",
+    "category": "Technology"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "t1",
+    "name": "Sunita Devi",
+    "location": "Varanasi, UP",
+    "role": "Homemaker → Data Entry Operator",
+    "quote": "Maine kabhi socha nahi tha ki main ghar se bahar nikal kar job kar sakti hoon. NayiUdaan ne mujhe woh yakeen diya. Aaj mujhe itni khushi hai.",
+    "quoteEn": "I never imagined stepping out and working. NayiUdaan gave me that belief. Today I am so proud.",
+    "rating": 5,
+    "program": "Digital Literacy Course"
+  },
+  {
+    "id": "t2",
+    "name": "Meghna Iyer",
+    "location": "Chennai, Tamil Nadu",
+    "role": "Returnship after 5-year break → Product Manager at Zoho",
+    "quote": "After 5 years of raising my children, I thought my career was over. The AI roadmap and mock interview practice gave me the confidence I needed to walk into Zoho's office.",
+    "quoteEn": "After 5 years of raising my children, I thought my career was over. The AI roadmap gave me the confidence to walk into Zoho's office.",
+    "rating": 5,
+    "program": "AI Career Comeback"
+  },
+  {
+    "id": "t3",
+    "name": "Phoolmati Yadav",
+    "location": "Muzaffarpur, Bihar",
+    "role": "Agricultural Labourer → Self-employed Tailor",
+    "quote": "Tailoring course seekhke mera apna boutique hai ab. Ek mahine mein 12,000 rupaye kamaati hoon. Mera beta proud hai mujhse.",
+    "quoteEn": "After learning tailoring, I now have my own boutique. I earn ₹12,000 a month. My son is proud of me.",
+    "rating": 5,
+    "program": "Tailoring & Fashion Design"
+  },
+  {
+    "id": "t4",
+    "name": "Rashida Begum",
+    "location": "Lucknow, UP",
+    "role": "School Dropout → Bank Mittra Operator",
+    "quote": "I was married at 16 and never finished school. But the digital literacy program changed my life. Now I run a banking access point and serve my whole village.",
+    "quoteEn": "I was married at 16 and never finished school. Now I run a banking access point and serve my whole village.",
+    "rating": 5,
+    "program": "Digital Literacy + Financial Literacy"
+  },
+  {
+    "id": "t5",
+    "name": "Dr. Smita Kulkarni",
+    "location": "Pune, Maharashtra",
+    "role": "Career Break (Caregiving) → Senior Developer at Persistent",
+    "quote": "I took a 3-year break to care for my mother. I thought 'who will hire me now?' NayiUdaan's resume optimizer made me realise I had more skills than I knew. Persistent hired me within 6 weeks.",
+    "quoteEn": "I took a 3-year break to care for my mother. NayiUdaan made me realise I had more skills than I knew. Persistent hired me in 6 weeks.",
+    "rating": 5,
+    "program": "AI Career Comeback"
+  },
+  {
+    "id": "t6",
+    "name": "Kamla Bai",
+    "location": "Udaipur, Rajasthan",
+    "role": "Domestic Worker → Healthcare Worker (ASHA)",
+    "quote": "Ghar ka kaam chhod ke main ab hospital mein kaam karti hoon. Apni beti ko doctor banana chahti hoon. NayiUdaan ne mujhe rasta dikhaya.",
+    "quoteEn": "I left domestic work and now work at a hospital. I want to make my daughter a doctor. NayiUdaan showed me the way.",
+    "rating": 5,
+    "program": "Healthcare Professional Course"
+  }
+]
