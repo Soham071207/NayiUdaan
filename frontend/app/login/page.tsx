@@ -27,6 +27,8 @@ export default function LoginPage() {
 
     try {
       await loginWithGoogle();
+      // Only set to false if we successfully navigated or logged in (if not redirecting)
+      setIsLoading(false);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to log in with Google");
       setIsLoading(false);

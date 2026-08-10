@@ -4,7 +4,7 @@ import { createContext, useContext, useState, useEffect, ReactNode } from "react
 import { useRouter } from "next/navigation";
 import { 
   onAuthStateChanged, 
-  signInWithRedirect, 
+  signInWithPopup, 
   signOut,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
@@ -68,8 +68,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
 
     try {
-      await signInWithRedirect(auth, googleProvider);
-      // The page will redirect to Google, and upon return, onAuthStateChanged handles the state
+      await signInWithPopup(auth, googleProvider);
+      router.push("/"); // redirect to homepage
     } catch (error) {
       console.error("Google login failed:", error);
       throw error;
