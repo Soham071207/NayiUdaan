@@ -61,8 +61,8 @@ export default function LoginPage() {
           <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] rounded-full bg-violet-400 blur-3xl translate-x-1/3 translate-y-1/3"></div>
         </div>
 
-        <Link href="/" className="relative z-10 w-full max-w-md flex flex-col items-center justify-center group bg-white rounded-[2rem] overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_70px_-20px_rgba(0,0,0,0.6)]">
-          <img src="/logo.png" alt="NayiUdaan Logo" className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
+        <Link href="/" className="relative z-10 w-full max-w-md flex flex-col items-center justify-center group bg-white p-10 rounded-[2.5rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_70px_-20px_rgba(0,0,0,0.6)]">
+          <img src="/logo.png" alt="NayiUdaan Logo" className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
         </Link>
       </div>
 
