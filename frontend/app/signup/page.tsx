@@ -19,7 +19,7 @@ export default function SignupPage() {
 
   useEffect(() => {
     if (!authLoading && isAuthenticated) {
-      router.replace("/upload");
+      router.replace("/");
     }
   }, [isAuthenticated, authLoading, router]);
 
@@ -51,19 +51,19 @@ export default function SignupPage() {
   return (
     <main className="min-h-screen grid grid-cols-1 md:grid-cols-2 font-jakarta">
       {/* Left panel - Image/Branding */}
-      <div className="hidden md:flex flex-col justify-between bg-gradient-to-br from-violet-600 to-cyan-500 p-12 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2669&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-20" />
+      <div className="hidden md:flex flex-col items-center justify-center bg-gradient-to-br from-violet-600 to-purple-800 p-12 relative overflow-hidden">
+        {/* Texture overlay */}
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1.5px,transparent_1.5px)] bg-[size:24px_24px] mix-blend-overlay" />
         
-        <Link href="/" className="relative z-10 flex items-center gap-2.5">
-          <img src="/logo.png" alt="NayiUdaan" className="h-12 object-contain drop-shadow-md" />
-        </Link>
-
-        <div className="relative z-10 max-w-md">
-          <h1 className="text-4xl font-bold mb-4 leading-tight">Your next chapter starts today.</h1>
-          <p className="text-lg text-[var(--primary-light)]">
-            Join thousands of women across India who have successfully returned to the workforce with our AI-powered platform.
-          </p>
+        {/* Decorative background shapes */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
+          <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-white blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] rounded-full bg-violet-400 blur-3xl translate-x-1/3 translate-y-1/3"></div>
         </div>
+
+        <Link href="/" className="relative z-10 w-full max-w-md flex flex-col items-center justify-center group bg-white rounded-[2rem] overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_70px_-20px_rgba(0,0,0,0.6)]">
+          <img src="/logo.png" alt="NayiUdaan Logo" className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
+        </Link>
       </div>
 
       {/* Right panel - Form */}

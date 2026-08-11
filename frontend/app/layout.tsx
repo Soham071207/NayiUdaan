@@ -33,6 +33,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-jakarta antialiased">
         <AuthProvider>
           <CareerReportProvider>
+            <div className="cosmic-element">
+              <div className="stars-layer"></div>
+              <div className="wind-wave"></div>
+              <div className="ice-crystal"></div>
+            </div>
             {children}
           </CareerReportProvider>
         </AuthProvider>

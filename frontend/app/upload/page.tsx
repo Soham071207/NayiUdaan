@@ -9,6 +9,7 @@ import DropZone from "@/features/upload/DropZone";
 import ProcessingSteps, { PROCESSING_STEPS } from "@/features/upload/ProcessingSteps";
 import { uploadResume } from "@/services/api";
 import { useCareerReport } from "@/context/CareerReportContext";
+import { useAuth } from "@/context/AuthContext";
 import { sleep } from "@/lib/utils";
 
 type Stage = "idle" | "processing" | "done" | "error";
@@ -16,6 +17,7 @@ type Stage = "idle" | "processing" | "done" | "error";
 export default function UploadPage() {
   const router = useRouter();
   const { setReport } = useCareerReport();
+  const { logout } = useAuth();
 
   const [file, setFile] = useState<File | null>(null);
   const [stage, setStage] = useState<Stage>("idle");
@@ -60,8 +62,15 @@ export default function UploadPage() {
   };
 
   return (
-    <div className="font-jakarta bg-[#F5FAF4] text-gray-900 selection:bg-violet-600/20 min-h-screen">
+    <div className="font-jakarta text-gray-900 selection:bg-violet-600/20 min-h-screen">
       <main className="flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden min-h-screen">
+        <button 
+          onClick={logout}
+          className="absolute top-6 right-6 md:top-8 md:right-8 px-5 py-2.5 bg-white/60 hover:bg-white backdrop-blur-md rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 shadow-sm transition-all z-50 flex items-center gap-2"
+        >
+          Sign Out
+        </button>
+
         {/* Decorative blobs */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-[#EAF5E4] blur-3xl pointer-events-none -z-10" />
 
@@ -123,6 +132,28 @@ export default function UploadPage() {
                 animate={{ opacity: 1, y: 0 }}
                 className="space-y-6"
               >
+                {stage === "processing" && (
+                  <div className="flex justify-center mb-8">
+                    <div aria-label="Orange and tan hamster running in a metal wheel" role="img" className="wheel-and-hamster scale-75 sm:scale-100">
+                      <div className="wheel"></div>
+                      <div className="hamster">
+                        <div className="hamster__body">
+                          <div className="hamster__head">
+                            <div className="hamster__ear"></div>
+                            <div className="hamster__eye"></div>
+                            <div className="hamster__nose"></div>
+                          </div>
+                          <div className="hamster__limb--fr"></div>
+                          <div className="hamster__limb--fl"></div>
+                          <div className="hamster__limb--br"></div>
+                          <div className="hamster__limb--bl"></div>
+                          <div className="hamster__tail"></div>
+                        </div>
+                      </div>
+                      <div className="spoke"></div>
+                    </div>
+                  </div>
+                )}
                 <div className="text-center">
                   <p className="text-gray-900 font-semibold text-lg">
                     {stage === "done" ? "✨ Analysis Complete!" : "AI is analysing your resume..."}

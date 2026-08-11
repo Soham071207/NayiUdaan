@@ -112,28 +112,33 @@ export default function RoadmapTimeline({ weeks }: RoadmapTimelineProps) {
                 >
                   <div className="px-5 pb-5 space-y-4 border-t border-purple-500/20 pt-4">
                     {/* Tasks */}
-                    <div className="space-y-2.5">
-                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Tasks</p>
+                    <div className="pt-2 pb-4 space-y-1">
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">Tasks</p>
                       {week.tasks.map((task, ti) => {
                         const key = `${week.week}-${ti}`;
                         const done = completed.has(key);
                         return (
-                          <button
-                            key={ti}
-                            onClick={() => toggleTask(key)}
-                            className="w-full flex items-start gap-3 text-left group"
-                          >
-                            {done
-                              ? <CheckCircle className="w-4.5 h-4.5 text-gray-500 flex-shrink-0 mt-0.5" />
-                              : <Circle className="w-4.5 h-4.5 text-gray-500 flex-shrink-0 mt-0.5 group-hover:text-gray-500 transition-colors" />
-                            }
-                            <span className={cn(
-                              "text-sm transition-colors",
-                              done ? "line-through text-gray-500" : "text-gray-700 group-hover:text-gray-800"
-                            )}>
+                          <div key={ti} className="roadmap-flip-checkbox">
+                            <input
+                              type="checkbox"
+                              id={key}
+                              checked={done}
+                              onChange={() => toggleTask(key)}
+                            />
+                            <label htmlFor={key} className="cbx">
+                              <div className="flip">
+                                <div className="front"></div>
+                                <div className="back">
+                                  <svg viewBox="0 0 16 14" height="14" width="16">
+                                    <path d="M2 8.5L6 12.5L14 1.5"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </label>
+                            <label htmlFor={key} className="task-text">
                               {task}
-                            </span>
-                          </button>
+                            </label>
+                          </div>
                         );
                       })}
                     </div>

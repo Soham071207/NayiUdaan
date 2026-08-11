@@ -42,7 +42,7 @@ export default function PublicNavbar() {
         <div className="mx-auto max-w-7xl px-5 py-4 flex items-center justify-between gap-6">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
-            <img src="/logo.png" alt="NayiUdaan" className="h-8 object-contain group-hover:scale-105 transition-transform" />
+            <img src="/logo.png" alt="NayiUdaan" className="h-14 w-auto object-contain group-hover:scale-105 transition-transform" />
           </Link>
 
           {/* Desktop nav */}

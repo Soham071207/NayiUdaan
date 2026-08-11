@@ -23,9 +23,9 @@ export default function Sidebar() {
   return (
     <aside className="fixed left-0 top-0 h-full w-64 flex flex-col z-40 border-r border-violet-100 bg-white/90 backdrop-blur-xl">
       {/* Brand */}
-      <div className="px-6 py-6 border-b border-violet-100">
+      <div className="px-6 py-6 border-b border-violet-100 flex items-center justify-start">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <img src="/logo.png" alt="NayiUdaan" className="h-8 object-contain group-hover:scale-105 transition-transform" />
+          <img src="/logo.png" alt="NayiUdaan" className="h-14 w-auto object-contain group-hover:scale-105 transition-transform" />
         </Link>
       </div>
 
@@ -33,10 +33,12 @@ export default function Sidebar() {
       <div className="px-4 pt-5 pb-2">
         <Link
           href="/upload"
-          className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl bg-gradient-to-r from-violet-600/90 to-cyan-500/90 text-white text-sm font-semibold hover:from-violet-600 hover:to-cyan-500 shadow-sm transition-all duration-200 group"
+          className="analysis-btn group"
         >
-          <Plus className="w-4 h-4 group-hover:rotate-90 transition-transform duration-300" />
-          New Analysis
+          <svg height="20" width="20" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" className="sparkle">
+            <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+          </svg>
+          <span className="text">New Analysis</span>
         </Link>
       </div>
 

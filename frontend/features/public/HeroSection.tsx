@@ -99,10 +99,6 @@ export default function HeroSection() {
               Start My Journey
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <a href="#mission" className="btn-outline text-base gap-2.5">
-              <Play className="w-4 h-4" />
-              Learn More
-            </a>
           </motion.div>
 
           {/* Trust line — no fake numbers */}
